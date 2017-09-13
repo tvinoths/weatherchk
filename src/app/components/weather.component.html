@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+        <img class="left" alt="Brand" width="50px" height="50px" src="/favicon.ico">
+      <a class="navbar-brand" href="">Weather check</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#search">Search</a></li>
+          <li><a href="#result">Result</a></li>
+          <li><a href="#jsondata">Json Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="search" class="container-fluid">
+  <h1>Hello check {{name}}</h1>
+  <label><b>please enter your city name:</b></label>
+        <input type="text" [(ngModel)]="city" />
+
+          <input type="button" href="#result" class="btn btn-primary" value="Submit" (click)="method(this.city)" />
+</div>
+<div id="result" class="container-fluid">
+  <h1>Weather now</h1>
+  <h1>City Name : {{weathers.name}} , <img class="sm" src="http://openweathermap.org/images/flags/{{weathers.sys.country | lowercase }}.png"> {{weathers.sys.country}}</h1>
+  <h1>Temprature : {{weathers.main.temp - 273.15}}° C</h1>
+  <h3>weather main : {{weathers.weather[0].main}}</h3>
+  <h3>weather description : <img class="sm" src="http://openweathermap.org/img/w/{{weathers.weather[0].icon}}.png"> {{weathers.weather[0].description}}</h3>
+  <h3>humidity : {{weathers.main.humidity}}</h3>
+  <h3>pressure : {{weathers.main.pressure}}</h3>
+  <h3>Wind speed : {{weathers.wind.speed}}</h3>
+</div>
+<div id="jsondata" class="container-fluid">
+  <h1>Json data : </h1>
+  <pre class="jsondata">{{ weathers | json }}</pre>
+</div>

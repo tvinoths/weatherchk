@@ -1,0 +1,31 @@
+  /* #search {padding-top:50px;height:auto;color: black; background-color: #3e9ddb;} */
+  #search { position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: black;
+  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430); }
+  #result {padding-top:50px;height:auto;color: white; background-color: #39c9fb; position: relative;
+  background-image: url("../img/bg-cta.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+  #jsondata {padding-top:50px;height:auto;color: black; background-color: #6552FB;
+    
+  background: url("../img/bg-pattern.png"), #7b4397; 
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left,  #dc2430, #7b4397);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #dc2430, #7b4397); } 
+  #result {padding-top:50px;height:auto;color: white; background-color: #39c9fb; position: relative;
+}
+
+  .left{
+      float: left;
+      padding-right: 10px;
+      }
+  .right{
+    float: right;
+    }
